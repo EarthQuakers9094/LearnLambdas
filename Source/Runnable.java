@@ -5,3 +5,8 @@ package Source;
 
 // TODO: Declare a @FunctionalInterface named Runnable.
 // It must have one abstract method: void run().
+@FunctionalInterface 
+public interface Runnable {
+
+    public void run();
+}
