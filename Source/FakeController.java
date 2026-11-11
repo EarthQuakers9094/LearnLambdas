@@ -7,11 +7,21 @@ public class FakeController {
 
     public void bind(String button, Command command) {
         // TODO: Store a button/command pair in bindings.
+        bindings.put(button.toUpperCase(), command);
         // Tip: Keep button names uppercase to match keyboard input.
     }
 
     public void press(String button) {
         // TODO: Look up the Command in bindings.
+        Command command = bindings.get(button);
+        if(command != null){
+            command.initialize();
+            command.execute();
+            command.end(false);
+        }
+        else{
+            System.out.println("wrong button");
+        }
         // If present, call initialize(), execute(), then end(false).
         // Otherwise print an error message.
         // This is one simulated press, NOT a full scheduler.

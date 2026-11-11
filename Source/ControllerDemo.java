@@ -9,6 +9,7 @@ public class ControllerDemo {
 
         // PART 1 — Simple commands and bindings
         // TODO: Bind A to a RunCommand that sets motor speed to 0.75.
+        controller.bind("A", new RunCommand(() -> motor.setSpeed(.5)));
         // TODO: Bind B to a RunCommand that stops the motor (method reference).
         // TODO: Bind X to reverse the motor at -0.5.
         // TODO: Bind Y to a command that prints a robot status message.

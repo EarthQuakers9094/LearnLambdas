@@ -4,3 +4,9 @@ package Source;
 
 // TODO: Declare a @FunctionalInterface named DoubleSupplier.
 // It must have one abstract method: double getAsDouble().
+
+@FunctionalInterface 
+public interface DoubleSupplier {
+
+    public double getAsDouble();
+}
